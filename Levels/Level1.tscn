@@ -1,62 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
+[ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
 
 [node name="Level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 537.574, 138.136 )
+position = Vector2( 494.762, 1008.64 )
 
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2( 500, 728 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-visible = false
-scale = Vector2( 10, 10 )
-shape = SubResource( 1 )
-
-[node name="Floor2" type="StaticBody2D" parent="."]
-position = Vector2( 1140, 784 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor2"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
-visible = false
-scale = Vector2( 10, 10 )
-shape = SubResource( 1 )
-
-[node name="Floor3" type="StaticBody2D" parent="."]
-position = Vector2( -132, 636 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Floor3"]
-scale = Vector2( 10, 10 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
-visible = false
-scale = Vector2( 10, 10 )
-shape = SubResource( 1 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 528, 304 )
-current = true
-zoom = Vector2( 2, 2 )
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 4.7569, 856.229 )
+tile_set = ExtResource( 2 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( -655323, 2, 0, -458693, 2, 0, -196587, 1, 0, -196550, 2, 0, -131040, 2, 0, -131024, 7, 0, -130984, 6, 0, 14, 1, 0, 65650, 6, 0, 131153, 6, 0, 196661, 2, 0, 262149, 0, 0, 262164, 0, 0, 262175, 2, 0, 262249, 7, 0, 458764, 0, 0, 458846, 6, 0, 524352, 5, 0, 524359, 5, 0, 524366, 5, 0, 589873, 2, 0, 655378, 0, 0, 655397, 2, 0, 720897, 0, 0 )
