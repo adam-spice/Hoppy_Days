@@ -19,6 +19,6 @@ user/
 # Plugin specific ignores
 screenshots/
 icons.pngs/
-
+bin/x11/release/
 
 
